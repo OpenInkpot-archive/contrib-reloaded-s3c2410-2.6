@@ -1,0 +1,23 @@
+= reloaded.ko =
+
+Linux 2.6 kernel module emulating kexec functionality for the Hanlin V3 kernel.
+
+== How to compile ==
+
+* Obtain the toolchain (released by Hanlin) and kernel headers (vanilla linux-2.6.11.7)
+
+* make CROSS_COMPILE=arm-9tdmi-linux-gnu- ARCH=arm -C <kernel headers dir> modules
+
+== How to use ==
+
+insmod reloaded.ko zImage=<path to zImage> [initrd.gz=<path to initrd.gz>] [cmdline=<cmdline>] [machtype=<machtype>]
+
+intird.gz defaults to 'initrd.gz', set it to empty string to disable initrd.
+cmdline defaults to empty string
+machtype defaults to 193 (Hanlin V3)
+
+== Credits ==
+
+* Tobias Poschwatta <tp@fonz.de> - Original dns323-reloaded module
+* Ondřej Herman <ondra@openinkpot.org> - adaptation to Hanlin V3
+
