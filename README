@@ -10,9 +10,10 @@ Linux 2.6 kernel module emulating kexec functionality for the Hanlin V3 kernel.
 
 == How to use ==
 
-insmod reloaded.ko zImage=<path to zImage> [initrd.gz=<path to initrd.gz>] [cmdline=<cmdline>] [machtype=<machtype>]
+insmod reloaded.ko [kernel=<path to zImage>] [initrd=<path to initrd.gz>] [cmdline=<cmdline>] [machtype=<machtype>]
 
-intird.gz defaults to 'initrd.gz', set it to empty string to disable initrd.
+kernel defaults to 'zImage'
+initrd defaults to 'initrd.gz', set it to empty string to disable initrd.
 cmdline defaults to empty string
 machtype defaults to 193 (Hanlin V3)
 
