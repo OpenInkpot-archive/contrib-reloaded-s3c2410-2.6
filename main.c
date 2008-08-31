@@ -148,11 +148,11 @@ static void *make_taglist(int initrd_size)
         t->u.mem.start = mem_start;
 
         if (initrd_size > 0) {
-                printk("INITRD: start %08lx size %d\n", 0x800000lu, initrd_size);
+                printk("INITRD: start %08lx size %d\n", 0x30800000lu, initrd_size);
                 t = tag_next(t);
                 t->hdr.size = tag_size(tag_initrd);
                 t->hdr.tag = ATAG_INITRD2;
-                t->u.initrd.start = 0x800000;
+                t->u.initrd.start = 0x30800000;
                 t->u.initrd.size = initrd_size;
         }
 
