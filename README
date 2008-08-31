@@ -6,7 +6,7 @@ Linux 2.6 kernel module emulating kexec functionality for the Hanlin V3 kernel.
 
 * Obtain the toolchain (released by Hanlin) and kernel headers (vanilla linux-2.6.11.7)
 
-* make CROSS_COMPILE=arm-9tdmi-linux-gnu- ARCH=arm -C <kernel headers dir> modules
+* make CROSS_COMPILE=arm-9tdmi-linux-gnu- ARCH=arm -C <kernel headers dir> M=`pwd` modules
 
 == How to use ==
 
